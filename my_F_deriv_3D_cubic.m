@@ -1,5 +1,5 @@
-function F = my_F_deriv_3D_cubic(v,RR,NN)
-% define free volume
+% calculate derivative of free volume in SC lattice
+function F = my_F_deriv_3D_cubic(v,RR)
 a_vec = v.^(1/3);
 da_dv_vec = 1./(3*v.^(2/3));
 

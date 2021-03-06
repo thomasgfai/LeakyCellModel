@@ -1,5 +1,5 @@
-function F = my_F_deriv_3D_bcc(v,RR,NN)
-% define free volume
+% compute derivative of free volume in BCC lattice
+function F = my_F_deriv_3D_bcc(v,RR)
 a_vec = (2*v).^(1/3);
 da_dv_vec = 2^(1/3)/3*1./(v.^(2/3));
 
@@ -129,7 +129,7 @@ for i=1:numel(a_vec)
         dihedral_angle_vertex = acos(-1/2)/(2*pi);
         
         F(i) = No*a^2*da_dv ...
-        +No*(4*ddouble_int*dihedral_angle_base+4*dshort_double_int*dihedral_angle_vertex+...
+             +No*(4*ddouble_int*dihedral_angle_base+4*dshort_double_int*dihedral_angle_vertex+...
              +2*dlong_double_int-2*dtriple_int ...
               -4*dsquare_triple_int-2*dlong_triple_int ...
               +4*dquad_int+dsquare_quad_int-dquint_int);

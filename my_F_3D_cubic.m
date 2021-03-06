@@ -1,10 +1,5 @@
-function F = my_F_3D_cubic(v,RR,NN)
-% define free volume
-
-%26 vertices
-%18 boxes
-%24 faces
-
+% calculate free volume in SC lattice
+function F = my_F_3D_cubic(v,RR)
 a_vec = v.^(1/3);
 
 F = zeros(1,numel(a_vec));
